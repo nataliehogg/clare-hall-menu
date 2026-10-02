@@ -1,5 +1,5 @@
 """Scrape the Clare Hall weekly menu (a Microsoft Sway) and write an .ics calendar
-of the vegetarian main course for each lunch and dinner.
+with one event per lunch and dinner, the full menu in its description.
 
 Only the current week is kept. The parsed menu is also saved to menus.json; its
 weekly commit counts as repository activity, which stops GitHub disabling the
@@ -23,7 +23,6 @@ DATA_FILE = ROOT / "menus.json"
 ICS_FILE = ROOT / "public" / "menu.ics"
 
 MEALS = {"LUNCH": ("1200", "1330"), "DINNER": ("1800", "1900")}
-VEG_INDEX = 2  # soup, meat main, veg main, pudding
 
 DAY_RE = re.compile(
     r"^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\s+"
@@ -102,14 +101,6 @@ def fetch_dom(url):
     return out.stdout
 
 
-def split_dish(line):
-    """'Dish name - PB, GF' -> ('Dish name', 'PB, GF')."""
-    name, sep, tags = line.rpartition(" -")
-    if not sep:
-        return line.strip(), ""
-    return name.strip(), tags.strip()
-
-
 def parse(paragraphs):
     """Return {date: {meal: [dish lines]}} for each day on the menu."""
     days, day, meal = {}, None, None
@@ -132,11 +123,8 @@ def parse(paragraphs):
     return days
 
 
-def closed_title(dishes):
-    text = " ".join(dishes)
-    if "CLOSED" not in text.upper():
-        return None
-    return re.sub(r"formal hall", "Formal Hall", text.capitalize(), flags=re.I)
+def is_closed(dishes):
+    return "CLOSED" in " ".join(dishes).upper()
 
 
 def ics_escape(s):
@@ -169,13 +157,7 @@ def build_ics(menus, url):
         for meal, dishes in menus[date].items():
             if not dishes:
                 continue
-            closed = closed_title(dishes)
-            if closed:
-                summary = closed
-            elif len(dishes) > VEG_INDEX:
-                summary = split_dish(dishes[VEG_INDEX])[0]
-            else:
-                summary = f"{meal.title()}: see menu"
+            summary = "CH closed" if is_closed(dishes) else f"CH {meal.lower()}"
             start, end = MEALS[meal]
             ymd = date.replace("-", "")
             lines += [
