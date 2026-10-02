@@ -1,8 +1,9 @@
 """Scrape the Clare Hall weekly menu (a Microsoft Sway) and write an .ics calendar
 of the vegetarian main course for each lunch and dinner.
 
-The Sway is overwritten each week, so parsed menus are kept in menus.json and the
-calendar is built from the full history.
+Only the current week is kept. The parsed menu is also saved to menus.json; its
+weekly commit counts as repository activity, which stops GitHub disabling the
+scheduled workflow.
 """
 
 import html
@@ -10,11 +11,13 @@ import json
 import re
 import shutil
 import subprocess
+import urllib.request
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
-SWAY_URL = "https://sway.cloud.microsoft/b7Zz74Q2g96EIhE9?ref=Link&loc=play"
+DINING_URL = "https://www.clarehall.cam.ac.uk/dining/"
+FALLBACK_SWAY_URL = "https://sway.cloud.microsoft/b7Zz74Q2g96EIhE9?ref=Link&loc=play"
 ROOT = Path(__file__).parent
 DATA_FILE = ROOT / "menus.json"
 ICS_FILE = ROOT / "public" / "menu.ics"
@@ -71,7 +74,20 @@ class ParagraphParser(HTMLParser):
             self._buf.append(data)
 
 
-def fetch_dom():
+def find_sway_url():
+    """Take the menu link from the dining page, in case the college posts a new Sway."""
+    try:
+        req = urllib.request.Request(DINING_URL, headers={"User-Agent": "Mozilla/5.0"})
+        page = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "replace")
+        m = re.search(r'href="(https://sway\.(?:cloud\.microsoft|office\.com)/[^"]+)"', page)
+        if m:
+            return html.unescape(m[1])
+    except OSError as e:
+        print(f"Could not read dining page ({e}); using fallback Sway link.")
+    return FALLBACK_SWAY_URL
+
+
+def fetch_dom(url):
     chrome = next(
         (shutil.which(c) for c in ("google-chrome", "google-chrome-stable", "chromium", "chromium-browser") if shutil.which(c)),
         None,
@@ -80,7 +96,7 @@ def fetch_dom():
         raise RuntimeError("No Chrome/Chromium found")
     out = subprocess.run(
         [chrome, "--headless=new", "--disable-gpu", "--no-sandbox",
-         "--virtual-time-budget=20000", "--dump-dom", SWAY_URL],
+         "--virtual-time-budget=20000", "--dump-dom", url],
         capture_output=True, text=True, timeout=120,
     )
     return out.stdout
@@ -140,7 +156,7 @@ def fold(line):
     return "\r\n".join(out)
 
 
-def build_ics(menus):
+def build_ics(menus, url):
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     lines = [
         "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//clare-hall-menu//EN",
@@ -171,7 +187,7 @@ def build_ics(menus):
                 f"SUMMARY:{ics_escape(summary)}",
                 f"DESCRIPTION:{ics_escape(meal.title() + ' menu:' + chr(10) + chr(10).join(dishes))}",
                 "LOCATION:Clare Hall Dining Hall",
-                f"URL:{SWAY_URL}",
+                f"URL:{url}",
                 "TRANSP:TRANSPARENT",
                 "END:VEVENT",
             ]
@@ -180,19 +196,17 @@ def build_ics(menus):
 
 
 def main():
+    url = find_sway_url()
     parser = ParagraphParser()
-    parser.feed(fetch_dom())
-    new = parse(parser.paragraphs)
-    if not new:
-        raise SystemExit("No menu found on the Sway page; leaving calendar unchanged.")
+    parser.feed(fetch_dom(url))
+    menus = parse(parser.paragraphs)
+    if not menus:
+        raise SystemExit(f"No menu found at {url}; leaving calendar unchanged.")
 
-    menus = json.loads(DATA_FILE.read_text()) if DATA_FILE.exists() else {}
-    menus.update(new)
     DATA_FILE.write_text(json.dumps(menus, indent=2, ensure_ascii=False) + "\n")
-
     ICS_FILE.parent.mkdir(exist_ok=True)
-    ICS_FILE.write_text(build_ics(menus), newline="")
-    print(f"Parsed {len(new)} days; calendar has {len(menus)} days.")
+    ICS_FILE.write_text(build_ics(menus, url), newline="")
+    print(f"Parsed {len(menus)} days from {url}")
 
 
 if __name__ == "__main__":
