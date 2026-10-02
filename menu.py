@@ -1,9 +1,9 @@
 """Scrape the Clare Hall weekly menu (a Microsoft Sway) and write an .ics calendar
 with one event per lunch and dinner, the full menu in its description.
 
-Only the current week is kept. The parsed menu is also saved to menus.json; its
-weekly commit counts as repository activity, which stops GitHub disabling the
-scheduled workflow.
+The Sway holds one week at a time and is overwritten, so menus.json keeps every
+day from today onwards (past days are dropped). Its regular commits also count as
+repository activity, which stops GitHub disabling the scheduled workflow.
 """
 
 import html
@@ -13,6 +13,7 @@ import shutil
 import subprocess
 import urllib.request
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -181,14 +182,18 @@ def main():
     url = find_sway_url()
     parser = ParagraphParser()
     parser.feed(fetch_dom(url))
-    menus = parse(parser.paragraphs)
-    if not menus:
+    new = parse(parser.paragraphs)
+    if not new:
         raise SystemExit(f"No menu found at {url}; leaving calendar unchanged.")
+
+    today = datetime.now(ZoneInfo("Europe/London")).date().isoformat()
+    old = json.loads(DATA_FILE.read_text()) if DATA_FILE.exists() else {}
+    menus = {d: m for d, m in sorted((old | new).items()) if d >= today}
 
     DATA_FILE.write_text(json.dumps(menus, indent=2, ensure_ascii=False) + "\n")
     ICS_FILE.parent.mkdir(exist_ok=True)
     ICS_FILE.write_text(build_ics(menus, url), newline="")
-    print(f"Parsed {len(menus)} days from {url}")
+    print(f"Parsed {len(new)} days from {url}; calendar shows {len(menus)} days from {today}")
 
 
 if __name__ == "__main__":
