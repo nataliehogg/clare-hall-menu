@@ -1,1 +1,64 @@
-{}
+{
+  "2026-10-05": {
+    "LUNCH": [
+      "Roasted Butternut, Cumin & Coriander Soup - PB, GF",
+      "Pork Chops, Mashed Potato, Braised Red Cabbage, & Salsa Verde - GF",
+      "Chickpea & Cauliflower Steaks, Mashed Potato, Braised Red Cabbage & Salsa Verde - GF, PB",
+      "Coconut & Caramel Rice Pudding - GF, PB"
+    ],
+    "DINNER": [
+      "Closed for Matriculation Dinner"
+    ]
+  },
+  "2026-10-06": {
+    "LUNCH": [
+      "Smokey Lentil Soup - PB, GF",
+      "Sticky Beef Fried Rice, Poached Egg, Crispy Onions & Herb Salad",
+      "Sticky Tofu Fried Rice, Poached Egg, Crispy Onions & Herb Salad - PB",
+      "Red Velvet Cake, Cream Cheese Frosting"
+    ],
+    "DINNER": [
+      "Closed for Matriculation Dinner"
+    ]
+  },
+  "2026-10-07": {
+    "LUNCH": [
+      "Red Pepper & Sweet Potato Soup - GF, PB",
+      "Nduja, Salami & Hot Honey Pizza, Parmesan Rocket Salad, Balsamic Dressing",
+      "Margherita Pizza, Parmesan Rocket Salad, Balsamic Dressing",
+      "Apple Crumble, Vanilla Custard & Cream - GF, PB"
+    ],
+    "DINNER": [
+      "CLOSED FOR FORMAL HALL"
+    ]
+  },
+  "2026-10-08": {
+    "LUNCH": [
+      "Black History Month – Celebrating Black Culinary Trailblazers",
+      "Edna Lewis's Silken Turnip & Potato Soup - PB, GF",
+      "Creole Fried Shrimp Lena Richards, James Hemings Macaroni Pie, Sweet Potato Biscuits & Fried Okra",
+      "West African Red Bean & Sweet Potato Stew, Jollof Rice- PB, GF",
+      "James Hemings Snow Eggs - PB"
+    ],
+    "DINNER": [
+      "Edna Lewis's Silken Turnip & Potato Soup - PB, GF",
+      "Ceylon Paneer, Aloo Gobi, Jeera Rice, Mango Chutney - GF Available on Req",
+      "Ceylon Smoked Tofu, Aloo Gobi, Jeera Rice, Mango Chutney - PB, GF Available on Req",
+      "James Hemings Snow Eggs - PB"
+    ]
+  },
+  "2026-10-09": {
+    "LUNCH": [
+      "Swede, Coriander & Orange Soup - PB, GF",
+      "Crumbed Fish, Chips,Fennel Lemon Slaw & Minted Peas - GF Available",
+      "Crumbed Banana Blossom, Fennel Lemon Slaw & Minted Peas - PB",
+      "Bread & Butter Pudding, Chocolate Custard"
+    ],
+    "DINNER": [
+      "Swede, Coriander & Orange Soup - PB, GF",
+      "Chicken Gyros, Toasted Pitta, Chopped Salad, Tzatziki - Halal",
+      "Crispy Cauliflower Gyros, Toasted Pitta, Chopped Salad, Crunchy Chickpeas & Tzatziki - PB, GF Available on Req",
+      "Bread & Butter Pudding, Chocolate Custard"
+    ]
+  }
+}
