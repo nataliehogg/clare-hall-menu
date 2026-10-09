@@ -1,16 +1,69 @@
 {
-  "2026-10-09": {
+  "2026-10-12": {
     "LUNCH": [
-      "Swede, Coriander & Orange Soup - PB, GF",
-      "Crumbed Fish, Chips, Fennel Lemon Slaw & Minted Peas - GF Available",
-      "Crumbed Banana Blossom, Fennel Lemon Slaw & Minted Peas - PB",
-      "Bread & Butter Pudding, Chocolate Custard"
+      "Shredded Cabbage & Gochujang Soup- PB, GF",
+      "Italian Three Bean & Sausage Cassarole, Mashed Potatoes & Season Greens",
+      "Italian Three Bean Cassarole, Mashed Potatoes & Season Greens - GF, PB",
+      "Chocolate Brownies, Whipped Miso Cream"
     ],
     "DINNER": [
-      "Swede, Coriander & Orange Soup - PB, GF",
-      "Chicken Gyros, Toasted Pitta, Chopped Salad, Tzatziki - Halal",
-      "Crispy Cauliflower Gyros, Toasted Pitta, Chopped Salad, Crunchy Chickpeas & Tzatziki - PB, GF Available on Req",
-      "Bread & Butter Pudding, Chocolate Custard"
+      "Shredded Cabbage & Gochujang Soup - PB, GF",
+      "Tuscan Chicken, Sundried Tomato & Spinach, Mashed Potato & Roasted Red Onion & Carrot - GF",
+      "Tuscan Tofu & Butterbean, Sundried Tomato & Spinach, Mashed Potato & Roasted Red Onion & Carrot - GF, PB",
+      "Chocolate Brownies, Whipped Miso Cream"
+    ]
+  },
+  "2026-10-13": {
+    "LUNCH": [
+      "Italian Bean & Vegetable Soup - PB, GF",
+      "Halloumi Shakshuka, Hummus, Egg, Pickled Red Onion & Pita Bread - GF Available",
+      "Vegan Chourizo Shakshuka, Hummus, Egg, Pickled Red Onion & Pita Bread - PB, GF Available",
+      "Roasted Plum & Vanilla Pannacotta - PB, GF"
+    ],
+    "DINNER": [
+      "Italian Bean & Vegetable Soup - PB, GF",
+      "Red Thai Prawn Curry, Steamed Rice, Bok Choy, Crunchy Onions & Pickled Ginger - GF",
+      "Red Thai Smoked Tempeh Curry, Steamed Rice, Bok Choy, Crunchy Onions & Pickled Ginger - PB, GF",
+      "Red Velvet Cake, Cream Cheese Frosting - PB, GF"
+    ]
+  },
+  "2026-10-14": {
+    "LUNCH": [
+      "Leek & Potato Soup - GF, PB",
+      "Beef Chilli Con Carne, Baked Potato, Tomato Salsa, Sour Cream, Green Salad - GF",
+      "Bean Chilli Con Carne, Baked Potato, Tomato Salsa, Sour Cream, Green Salad - PB, GF",
+      "Scones, Cream, & Strawberry Jam"
+    ],
+    "DINNER": [
+      "CLOSED FOR FORMAL HALL"
+    ]
+  },
+  "2026-10-15": {
+    "LUNCH": [
+      "Roasted Cauliflower & Cumin Soup - PB, GF",
+      "Pork & Butterbean Ragout, Lemon Polenta, Roasted Carrot & Red Onion - GF",
+      "Seitan & Butterbean Ragout, Lemon Polenta, Roasted Carrot & Red Onion- PB",
+      "Coffee & Banana Cake , Mascapone Cream - GF"
+    ],
+    "DINNER": [
+      "Roasted Cauliflower & Cumin Soup - PB, GF",
+      "Moroccan Chicken, Butternut & Chickpea Tagine, Bulgar Wheat & Orange Roasted Carrots",
+      "Moroccan Butternut & Chickpeas Tagine, Bulgar Wheat & Orange Roasted Carrots - PB",
+      "Coffee & Banana Cake , Mascapone Cream - GF"
+    ]
+  },
+  "2026-10-16": {
+    "LUNCH": [
+      "Roasted Carrot, Ginger & Coriander Soup - PB, GF",
+      "Caribbean Fried Fish Tacos, Chips, Pineapple Black Bean Salsa, Cabbage Street Slaw & Lime Coriander Dressing - GF Available",
+      "Pulled Aubergine Tacos, Chips, Pineapple Black Bean Salsa, Cabbage Street Slaw & Lime Coriander Dressing - PB",
+      "Coconut & White Chocolate Cake"
+    ],
+    "DINNER": [
+      "Roasted Carrot, Ginger & Coriander Soup - PB, GF",
+      "Matar Chicken Handi, Steamed Rice, Chapati & Raita - Halal",
+      "Matar Paneer, Steamed Rice, Roti & Raita - GF",
+      "Coconut & White Chocolate Cake"
     ]
   }
 }
