@@ -3,5 +3,69 @@
     "DINNER": [
       "Closed for Graduation Dinner"
     ]
+  },
+  "2026-10-26": {
+    "LUNCH": [
+      "Roasted Vegetable & Red Lentil Soup - PB, GF",
+      "Harissa Marinated Chicken, Charred Red Pepper, Grapefruit Grain Salad & Pickled Red Onion",
+      "Harissa Marinated Celeriac, Charred Red Pepper, Grapefruit Grain Salad & Pickled Red Onion - PB",
+      "Autumn Fruit Pavlova - GF"
+    ],
+    "DINNER": [
+      "Roasted Vegetable & Red Lentil Soup - PB, GF",
+      "Pork Tofu & Coconut Noodles, Coriander & Lime",
+      "Smoked Tofu & Shitake Mushroom Coconut Noodles, Coriander & Lime - PB",
+      "Autumn Fruit Pavlova - GF"
+    ]
+  },
+  "2026-10-27": {
+    "LUNCH": [
+      "Miso & Sweet Potato Soup - PB, GF",
+      "Hot & Sour Calamari, Steamed Brown Rice, Roasted Sweet Potato, Carrots & Cauliflower - GF",
+      "Hot & Sour Butterbean & Soya Falafel, Steamed Brown Rice, Roasted Sweet Potato, Carrots & Cauliflower - PB",
+      "Spiced Wild Plums, Mascarpone & Toasted Seed Crumb - GF"
+    ],
+    "DINNER": [
+      "Miso & Sweet Potato Soup - PB, GF",
+      "Mushroom Stroganoff, Mashed Potatoes & Roasted Autumnal Veggies - GF",
+      "Pulled Jackfruit & Aubergine Stroganoff, Mashed Potatoes & Roasted Autumnal Veggies - PB, GF",
+      "Spiced Wild Plums, Mascarpone & Toasted Seed Crumb - GF"
+    ]
+  },
+  "2026-10-28": {
+    "LUNCH": [
+      "Chunky Broccoli & Leek Soup - GF, PB",
+      "Beef Meatballs Baked in Tahini, Giant Couscous & Roasted Crown Prince",
+      "Jackfruit & Aubergine Baked in Tahini, Giant Couscous & Roasted Crown Prince - GF, PB",
+      "Miso & Apple Short Bread Slice"
+    ],
+    "DINNER": [
+      "CLOSED FOR FORMAL HALL"
+    ]
+  },
+  "2026-10-29": {
+    "LUNCH": [
+      "Smokey Bean & Vegetable Soup - PB",
+      "Hunters Chicken, Mash Potato, Seasonal Vegetables & BBQ Sauce - GF",
+      "Charred Aubergine, Mash Potato, Seasonal Vegetables & BBQ Sauce - PB, GF",
+      "Pear, Honey & Vanilla Custard Tart"
+    ],
+    "DINNER": [
+      "Closed for Student Formal"
+    ]
+  },
+  "2026-10-30": {
+    "LUNCH": [
+      "Blackbean, Coriander, Corn & Lime Soup - PB, GF",
+      "Sicilian Baked Haddock (Olives, Capers & Tomato), Steamed Baby Potatoes, Garlic Green Beans",
+      "Sicilian Baked Tofu & Butternut, Steamed Baby Potatoes, Garlic Green Beans - GF, PB",
+      "Halloween Doughnuts"
+    ],
+    "DINNER": [
+      "Blackbean, Coriander, Corn & Lime Soup - PB, GF",
+      "Halal Fried Chicken, Mashed Potato, Coleslaw & Corn Black Bean & Lime Salsa",
+      "Fried Halloumi, Mashed Potato, Coleslaw & Corn Black Bean & Lime Salsa",
+      "Halloween Doughnuts"
+    ]
   }
 }
