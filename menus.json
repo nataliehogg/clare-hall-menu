@@ -8,9 +8,48 @@
     ],
     "DINNER": [
       "Blackbean, Coriander, Corn & Lime Soup - PB, GF",
-      "Halal Fried Chicken, Mashed Potato, Coleslaw & Corn Black Bean & Lime Salsa",
-      "Fried Halloumi, Mashed Potato, Coleslaw & Corn Black Bean & Lime Salsa",
-      "Halloween Doughnuts"
+      "Halal Chicken Schwarma, Chips, Hummus, Pickled Vegetable Salad",
+      "Osyter Mushroom Schwarma, Chips, Hummus, Pickled Vegetable Salad",
+      "Tombstone Brownies"
+    ]
+  },
+  "2026-11-02": {
+    "LUNCH": [
+      "Birria Bean Soup - PB, GF",
+      "Italian Three Bean & Sausage Cassarole, Mashed Potatoes & Season Greens",
+      "Italian Three Bean Cassarole, Mashed Potatoes & Season Greens - PB, GF",
+      "Pan De Muerto"
+    ],
+    "DINNER": [
+      "Birria Bean Soup - PB, GF",
+      "Mole Chicken Legs, Arroz Roja, Corn Tortillas, Refried Beans, Lime & Red Onion Pickle - GF",
+      "Mushroom & Pinto Bean, Arroz Roja, Corn Tortillas, Refried Beans, Lime & Red Onion Pickle - PB, GF",
+      "Pan De Muerto"
+    ]
+  },
+  "2026-11-03": {
+    "LUNCH": [
+      "Thai Coconut Soup - GF, PB",
+      "Pulled Pork Fennel & Ricotta Lasagne, Apple & Celery Green Salad",
+      "Roasted Butternut, Sage & Ricotta Lasagne, Apple & Celery Green Salad - PB",
+      "Sticky Toffee Pudding, Burnt Orange Caramel"
+    ],
+    "DINNER": [
+      "CLOSED FOR DIWALI FORMAL HALL"
+    ]
+  },
+  "2026-11-05": {
+    "LUNCH": [
+      "Balsamic Roasted Tomato Soup - GF, PB",
+      "Battered Fish, Chips, Mushy Peas, Baked Beans & Tartare Sauce",
+      "Beer Battered Banana Blossom, Chips, Mushy Peas, Baked Beans & Tartare Sauce - PB",
+      "Roasted Apple Eton Mess Parfait, Butterscotch Sauce"
+    ],
+    "DINNER": [
+      "Balsamic Roasted Tomato Soup - GF, PB",
+      "Halal Mediterranean Chicken Orzo Bake, Roasted Tomato & Balsamic Onions",
+      "Mediterranean Plant Based Chicken Orzo Bake, Roasted Tomato & Balsamic Onions - PB",
+      "Roasted Apple Eton Mess Parfait, Butterscotch Sauce"
     ]
   }
 }
