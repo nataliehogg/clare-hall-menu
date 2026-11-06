@@ -1,1 +1,41 @@
-{}
+{
+  "2026-11-09": {
+    "LUNCH": [
+      "Roasted Beetroot & Dill Soup PB-GF",
+      "Coq Au Vin, Mashed Potatoes, Garlic Green Beans GF",
+      "Celeriac & Butterbean Au Vin, Mashed Potatoes & Garlic Green Beans PB-GF",
+      "Roasted Plum Panna Cotta PB-GF"
+    ],
+    "DINNER": [
+      "Roasted Beetroot & Dill Soup PB-GF",
+      "Hoisin Pork Stir Fry, Noodles, Crispy Shallots & Herb Salad",
+      "Hoisin Tempeh Stir Fry, Noodles, Crispy Shallots & Herb Salad PB",
+      "Roasted Plum Panna Cotta PB-GF"
+    ]
+  },
+  "2026-11-10": {
+    "LUNCH": [
+      "Indian Spiced Vegetable Soup PB-GF",
+      "Thai Prawn & Haddock Fishcakes, Crusted Baby Potatoes, Coriander & Red Onion Salad",
+      "Pulled Oyster Mushroom & Aubergine, Crusted Baby Potatoes, Coriander & Red Onion Salad PB",
+      "Lemon Blueberry Cake PB"
+    ],
+    "DINNER": [
+      "CLOSED FOR DIWALI FORMAL HALL"
+    ]
+  },
+  "2026-11-12": {
+    "LUNCH": [
+      "Miso, Sweet Potato Soup PB-GF",
+      "Sicilian Baked Haddock, Olives, Capers & Tomato, Lemon Herb Potatoes, Leeks & Garden Peas",
+      "Sicilian Baked Tofu, Olives, Capers & Tomato, Lemon Herb Potatoes, Leeks & Garden Peas",
+      "Wild Berry Tiramisu"
+    ],
+    "DINNER": [
+      "Miso Sweet Potato Soup PB-GF",
+      "Creamy Harissa & LIme Chicken, Khobez Bread, Shredded Carrot & Coriander Salad, Toasted Coconut",
+      "Creamy Harissa & Lime Lentil Ragout, Khobez Bread, Shredded Carrot & Coriander Salad, Toasted Coconut",
+      "Wild Berry Tiramisu"
+    ]
+  }
+}
