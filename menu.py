@@ -12,7 +12,7 @@ import re
 import shutil
 import subprocess
 import urllib.request
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 from html.parser import HTMLParser
 from pathlib import Path
@@ -27,9 +27,53 @@ MEALS = {"LUNCH": ("1200", "1330"), "DINNER": ("1800", "1900")}
 
 DAY_RE = re.compile(
     r"^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\s+"
-    r"(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$"
+    r"(\d{1,2})(?:st|nd|rd|th)?\s+((?:[A-Za-z]+\s*)+?)\s+(\d{4})$"
 )
 END_MARKERS = ("Our Sustainability Initiatives",)
+
+MONTHS = {
+    m.lower(): i
+    for i, m in enumerate(
+        ["January", "February", "March", "April", "May", "June", "July",
+         "August", "September", "October", "November", "December"], start=1)
+}
+
+WEEKDAYS = {d.lower(): i for i, d in enumerate(
+    ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])}
+
+
+def parse_day_heading(line):
+    """Parse a 'Monday 9th November 2026' heading into a date.
+
+    The college occasionally typos these (e.g. a doubled month name, or a date
+    whose day-of-week doesn't match). Tolerate doubled words; when the date and
+    weekday disagree, trust the weekday and use the nearest matching date.
+    """
+    m = DAY_RE.match(line)
+    if not m:
+        return None
+    weekday_name, day, month_str, year = m[1], int(m[2]), m[3], int(m[4])
+    month_words = month_str.split()
+    months = [MONTHS[w.lower()] for w in month_words if w.lower() in MONTHS]
+    if not months or not 1 <= day <= 31:
+        return None
+    month = months[0]
+    try:
+        candidate = date(year, month, day)
+    except ValueError:
+        return None
+    want = WEEKDAYS[weekday_name.lower()]
+    if candidate.weekday() == want:
+        return candidate
+    # Weekday/date mismatch: trust the weekday, find closest matching date.
+    for offset in (1, -1, 2, -2, 3, -3):
+        alt = candidate + timedelta(days=offset)
+        if alt.weekday() == want:
+            print(f"Warning: '{line}': date {candidate} is a "
+                  f"{candidate:%A}; using {alt} ({alt:%A}) to match '{weekday_name}'.")
+            return alt
+    print(f"Warning: '{line}': no nearby {weekday_name}; using {candidate} as written.")
+    return candidate
 
 VTIMEZONE = """BEGIN:VTIMEZONE
 TZID:Europe/London
@@ -109,10 +153,9 @@ def parse(paragraphs):
         line = html.unescape(line).strip()
         if line.startswith(END_MARKERS):
             break
-        m = DAY_RE.match(line)
-        if m:
-            date = datetime.strptime(f"{m[2]} {m[3]} {m[4]}", "%d %B %Y").date().isoformat()
-            day, meal = days.setdefault(date, {}), None
+        parsed_day = parse_day_heading(line)
+        if parsed_day is not None:
+            day, meal = days.setdefault(parsed_day.isoformat(), {}), None
             continue
         if day is None:
             continue
