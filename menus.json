@@ -1,16 +1,33 @@
 {
-  "2026-11-13": {
+  "2026-11-16": {
     "LUNCH": [
-      "Miso, Sweet Potato Soup PB-GF",
-      "Sicilian Baked Haddock, Olives, Capers & Tomato, Lemon Herb Potatoes, Leeks & Garden Peas",
-      "Sicilian Baked Tofu, Olives, Capers & Tomato, Lemon Herb Potatoes, Leeks & Garden Peas",
-      "Wild Berry Tiramisu"
+      "Miso Parsnip Soup PB-GF",
+      "Cumberland Pork Sausage, Mashed Potato, Roasted Vegetables & Red Onion Gravy",
+      "Carrot & Coriander Sausages, Mashed Potato, Roasted Vegetables & Red Onion Gravy PB-GF",
+      "Chocolate Brownies, Creme Chantilly"
     ],
     "DINNER": [
-      "Miso Sweet Potato Soup PB-GF",
-      "Creamy Harissa & LIme Chicken, Khobez Bread, Shredded Carrot & Coriander Salad, Toasted Coconut",
-      "Creamy Harissa & Lime Lentil Ragout, Khobez Bread, Shredded Carrot & Coriander Salad, Toasted Coconut",
-      "Wild Berry Tiramisu"
+      "Miso Parsnip Soup PB-GF",
+      "Chicken Fried Rice, Prawn Crackers, Chili Sauce",
+      "Sticky Tofu Fried Rice, Rice Crackers, Chili Sauce PB",
+      "Chocolate Brownies, Creme Chantilly"
     ]
+  },
+  "2026-11-17": {
+    "DINNER": []
+  },
+  "2026-11-18": {
+    "LUNCH": [],
+    "DINNER": [
+      "CLOSED FOR FORMAL HALL"
+    ]
+  },
+  "2026-11-19": {
+    "LUNCH": [],
+    "DINNER": []
+  },
+  "2026-11-20": {
+    "LUNCH": [],
+    "DINNER": []
   }
 }
