@@ -14,20 +14,56 @@
     ]
   },
   "2026-11-17": {
-    "DINNER": []
+    "LUNCH": [
+      "Groentesop Soup - PB",
+      "Cape Malay Bobotie, Tumeric Steamed Rice, Mango Chutney",
+      "Cape Malay Lentil Bobotie, Tumeric Steamed Rice, Mango Chutney - PB, GF",
+      "Malva Pudding, Orange Custard"
+    ],
+    "DINNER": [
+      "Groentesop Soup - PB",
+      "Smoked Tofu Laksa, Chilli Sauce, Herb Salad, Crunchy Onions & Poached Egg",
+      "Mushroom & Cauliflower Laksa, Chilli Sauce, Herb Salad, Crunchy Onions & Poached Egg - PB, GF",
+      "Malva Pudding, Orange Custard"
+    ]
   },
   "2026-11-18": {
-    "LUNCH": [],
+    "LUNCH": [
+      "Country Vegetable Soup - PB, GF",
+      "Chicken Korma, Steamed Rice, Naan Bread & Sambals",
+      "Bean & Butterut Korma, Steamed Rice, Naan Bread & Sambals - PB, GF Available",
+      "Pear & Aplple Crumble, Cream"
+    ],
     "DINNER": [
       "CLOSED FOR FORMAL HALL"
     ]
   },
   "2026-11-19": {
-    "LUNCH": [],
-    "DINNER": []
+    "LUNCH": [
+      "Minestrone Soup - PB, GF",
+      "Beef & Lentil Lasagne, Green Salad, Garlic Bread & Balsamic Dressing",
+      "Roasted Butternut & Sage Lasagne, Green Salad, Garlic Bread & Balsamic Dressing - PB",
+      "Crème Caramel - GF"
+    ],
+    "DINNER": [
+      "Minestrone Soup - PB, GF",
+      "Nduja & Fennel Polpette, Polenta, Garlic Greens & Salsa Verde",
+      "Roasted Vegetable & Butterbean Polpette Polenta, Garlic Greens & Salsa Verde - PB",
+      "Crème Caramel - GF"
+    ]
   },
   "2026-11-20": {
-    "LUNCH": [],
-    "DINNER": []
+    "LUNCH": [
+      "Roasted Cauliflower Soup - PB, GF",
+      "Battered Cod Fillets, Chips, Mushy Peas, Curry Sauce, Baked Beans & Tartare Sauce",
+      "Battered Mushroom & Aubergine, Chips, Mushy Peas Curry Sauce & Baked Beans - PB, GF Available",
+      "Steamed Sponge Pudding, Butterscotch Sauce"
+    ],
+    "DINNER": [
+      "Roasted Cauliflower Soup - PB, GF",
+      "Halal Fried Chicken, Biscuits & Gravy, Cole Slaw",
+      "Southern Fried Plant Based Chicken, Biscuits & Gravy, Cole Slaw - PB",
+      "Steamed Sponge Pudding, Butterscotch Sauce"
+    ]
   }
 }
