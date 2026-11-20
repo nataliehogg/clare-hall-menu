@@ -12,5 +12,72 @@
       "Southern Fried Plant Based Chicken, Biscuits & Gravy, Cole Slaw - PB",
       "Steamed Sponge Pudding, Butterscotch Sauce"
     ]
+  },
+  "2026-11-23": {
+    "LUNCH": [
+      "Sweet Potato, Carrot & Lemon Grass Soup PB-GF",
+      "Beef & Lentil Cottage Pie, Garden Greens & Red Onion Gravy - MC Gluten",
+      "Lentil & Butternut Cottage Pie, Garden Greens & Red Onion Gravy - MC Gluten, PB",
+      "Caramelised Pear & Ginger Vegan Panna Cotta - PB, GF"
+    ],
+    "DINNER": [
+      "Sweet Potato, Carrot & Lemon Grass Soup PB-GF",
+      "Chicken & Prawn Burgers, Sweet Potato Wedges, Thai Street Slaw",
+      "Pulled Mushroom & Black Bean Burgers, Sweet Potato Wedges, Thai Street Slaw - PB",
+      "Caramelised Pear & Ginger Vegan Panna Cotta - PB, GF"
+    ]
+  },
+  "2026-11-24": {
+    "LUNCH": [
+      "Curried Cauliflower, Cumin & Coconut Soup - PB",
+      "Chorizo Shakshuka, Hummus, Pitta Bread & Pickles",
+      "Veggie Shakshuka, Hummus, Pitta Bread & Pickles - PB",
+      "Vanilla & Apricot Steamed Pudding & Custard"
+    ],
+    "DINNER": [
+      "Curried Cauliflower, Cumin & Coconut Soup - PB",
+      "Chipotle Pork, Steamed Rice, Corn & Blackbean Salsa, Sour Cream & Pickled Red Onion & Jalapeno",
+      "Chipotle Mung Beans, Steamed Rice, Corn & Blackbean Salsa, Sour Cream & Pickled Red Onion & Jalapeno - PB",
+      "Vanilla & Apricot Steamed Pudding & Custard"
+    ]
+  },
+  "2026-11-25": {
+    "LUNCH": [
+      "White Bean, Parsley Soup, Garlic Croutons - PB, GF",
+      "Honey Mustard Glazed Ham, Roast Potatoes, Yam & Mallow Pie, Green Bean Cassarole & Gravy",
+      "Honey Mustard Glazed Celeriac, Roast Potatoes, Yam & Mallow Pie, Green Bean Cassarole, Onion Gravy - PB",
+      "Apple Pie, Whipped Custard Cream"
+    ],
+    "DINNER": [
+      "CLOSED FOR FORMAL HALL"
+    ]
+  },
+  "2026-11-26": {
+    "LUNCH": [
+      "French Onion Soup - PB, GF",
+      "Chicken Escalopes, Creamy Mushroom Sauce, Mashed Potato, Garlic Green Beans - GF",
+      "Baked Tofu, Creamy Mushroom, Mashed Potato, Garlic Green Beans - PB, MC Gluten",
+      "Scones, Cream & Strawberry Jam"
+    ],
+    "DINNER": [
+      "French Onion Soup - PB, GF",
+      "Sticky Tofu Pad Thai, Minted Cucumber & Carrot Slaw, Vegan Prawn Crackers",
+      "Sticky Tofu Pad Thai, Minted Cucumber & Carrot Slaw, Vegan Prawn Crackers - PB, GF",
+      "Scones, Cream & Strawberry Jam"
+    ]
+  },
+  "2026-11-27": {
+    "LUNCH": [
+      "Courgette & Baby Spinach Soup - PB, GF",
+      "BreadedHaddock Fish, Chips, Baked Beans, & Tartare Sauce",
+      "Breaded Banana Blossom, Chips, Baked Beans & Tartare Sauce - PB",
+      "Pear Tart Tatin, Crème Chantilly"
+    ],
+    "DINNER": [
+      "Courgette & Baby Spinach Soup - PB, GF",
+      "Roast Chicken, Polenta Potatoes, Steamed Seasonal Veggies, Chicken Gravy",
+      "Roast Plant Based Chicken, Polenta Potatoes, Steamed Seasonal Veggies, Vegetable Gravy - PB & GF",
+      "Pear Tart Tatin, Crème Chantilly"
+    ]
   }
 }
